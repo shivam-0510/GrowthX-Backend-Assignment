@@ -275,7 +275,7 @@ Make sure you have the following installed on your machine:
    ```
 
 10. Rejecting assignment:
-    Add a post request
+   Add a post request
 
    ```bash
    localhost:8080/api/v1/admin/assignments/:id/reject
@@ -285,7 +285,7 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-   "remarks":"Wrong answers"
+    "remarks":"Nice assignment"
    }
    ```
 
@@ -295,7 +295,7 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-   "message": "Assignment rejected",
-   "remarks": "wrong answers"
+    "message": "Assignment rejected",
+    "remarks": "Wrong answers"
    }
    ```
