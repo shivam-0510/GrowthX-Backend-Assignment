@@ -38,7 +38,10 @@ class adminController {
 
       await newAdmin.save();
 
+      //generate new token
       const token = generateToken(newAdmin);
+
+      //return the response
       return res.status(201).json({
         message: "Admin registered successfully",
         user: newAdmin,
@@ -83,6 +86,7 @@ class adminController {
       // Generate and return a token
       const token = generateToken(admin);
 
+      //return the response
       return res.status(200).json({
         message: "Login successful",
         access_token: `Bearer ${token}`,
@@ -103,6 +107,8 @@ class adminController {
   static getAllAssignments = async (req, res) => {
     try {
       const { id } = req.user;
+
+      //populate the assignment object
       const allAssignments = await assignmentModel
         .find({ admin: id })
         .populate("admin", "username")

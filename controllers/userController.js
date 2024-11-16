@@ -40,7 +40,10 @@ class userController {
 
       await newUser.save();
 
+      //create new token
       const token = generateToken(newUser);
+
+      //return the response
       return res.status(201).json({
         message: "User registered successfully",
         user: newUser,
@@ -85,6 +88,7 @@ class userController {
       // Generate and return a token
       const token = generateToken(user);
 
+      //return the response
       return res.status(200).json({
         message: "Login successful",
         access_token: `Bearer ${token}`,
@@ -110,6 +114,7 @@ class userController {
       const validator = vine.compile(assignmentSchema);
       const payload = await validator.validate(body);
 
+      //create new assignment
       const newAssignment = new assignmentModel({
         userId: req.user.id,
         task: payload.task,
@@ -118,10 +123,12 @@ class userController {
 
       await newAssignment.save();
 
+      //add assignment to the user data
       const findUser = await userModel.findById({ _id: req.user.id });
       findUser.assignmentsSubmitted.push(newAssignment._id);
       await findUser.save();
 
+      //populating the assignment object
       const populatedAssignment = await assignmentModel
         .findById(newAssignment._id)
         .populate("admin", "username")
@@ -135,6 +142,8 @@ class userController {
           ? populatedAssignment.admin.username
           : null,
       };
+
+      //return the response
       return res.status(201).json({
         message: "Assignment submitted successfully",
         response,
@@ -150,6 +159,7 @@ class userController {
 
   static getAllAdmins = async (req, res) => {
     try {
+      //find all admins
       const allAdmins = await adminModel.find({}).select("id username");
       return res.status(200).json(allAdmins);
     } catch (error) {
