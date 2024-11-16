@@ -50,7 +50,7 @@ Make sure you have the following installed on your machine:
 
 1. Open postman and create a new collection.
 
-2. Create a new user:
+2. #### Create a new user:
    Add a post request
 
    ```bash
@@ -86,7 +86,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-3. Login user:
+3. #### Login user:
    Add a post request
 
    ```bash
@@ -111,7 +111,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-4. Create a new admin:
+4. #### Create a new admin:
    Add a post request
 
    ```bash
@@ -147,7 +147,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-5. Login a new admin:
+5. #### Login a new admin:
    Add a post request
 
    ```bash
@@ -172,7 +172,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-6. Uploading assignment:
+6. #### Uploading assignment:
    Add a post request
 
    ```bash
@@ -203,7 +203,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-7. Get all admins:
+7. #### Get all admins:
    Add a get request
 
    ```bash
@@ -225,7 +225,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-8. Get all assignments:
+8. #### Get all assignments:
    Add a get request
 
    ```bash
@@ -248,7 +248,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-9. Accepting assignment:
+9. #### Accepting assignment:
    Add a post request
 
    ```bash
@@ -274,7 +274,7 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-10. Rejecting assignment:
+10. #### Rejecting assignment:
     Add a post request
 
       ```bash
