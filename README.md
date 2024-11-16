@@ -51,6 +51,7 @@ Make sure you have the following installed on your machine:
 1. Open postman and create a new collection.
 
 2. #### Create a new user:
+
    Add a post request
 
    ```bash
@@ -71,22 +72,23 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "message": "User registered successfully",
-    "user": {
-        "username": "shivam0510",
-        "email": "skg050210@gmail.com",
-        "password": "$2a$10$PCak**********************************",
-        "assignmentsSubmitted": [],
-        "_id": "67385b70bc4b61f91031fefc",
-        "createdAt": "2024-11-16T08:44:32.274Z",
-        "updated": "2024-11-16T08:44:32.274Z",
-        "__v": 0
-    },
-    "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9************************************"
+      "message": "User registered successfully",
+      "user": {
+         "username": "shivam0510",
+         "email": "skg050210@gmail.com",
+         "password": "$2a$10$PCak**********************************",
+         "assignmentsSubmitted": [],
+         "_id": "67385b70bc4b61f91031fefc",
+         "createdAt": "2024-11-16T08:44:32.274Z",
+         "updated": "2024-11-16T08:44:32.274Z",
+         "__v": 0
+      },
+      "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9************************************"
    }
    ```
 
 3. #### Login user:
+
    Add a post request
 
    ```bash
@@ -106,12 +108,13 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "message": "Login successful",
-    "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9****************************"
+      "message": "Login successful",
+      "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9****************************"
    }
    ```
 
 4. #### Create a new admin:
+
    Add a post request
 
    ```bash
@@ -148,6 +151,7 @@ Make sure you have the following installed on your machine:
    ```
 
 5. #### Login a new admin:
+
    Add a post request
 
    ```bash
@@ -158,8 +162,8 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-      "email":"1234@gmail.com",
-      "password":"1234556"
+         "email":"1234@gmail.com",
+         "password":"1234556"
    }
    ```
 
@@ -167,12 +171,13 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "message": "Login successful",
-    "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*******************************************8"
+      "message": "Login successful",
+      "access_token": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*******************************************8"
    }
    ```
 
 6. #### Uploading assignment:
+
    Add a post request
 
    ```bash
@@ -183,8 +188,8 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "task":"hello",
-    "admin":"6738648cd560d1d241cc4e6b"
+      "task":"hello",
+      "admin":"6738648cd560d1d241cc4e6b"
    }
    ```
 
@@ -194,16 +199,17 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "message": "Assignment submitted successfully",
-    "response": {
-        "userId": "shivam0510",
-        "task": "hello",
-        "admin": "shivam"
-    }
+      "message": "Assignment submitted successfully",
+      "response": {
+         "userId": "shivam0510",
+         "task": "hello",
+         "admin": "shivam"
+      }
    }
    ```
 
 7. #### Get all admins:
+
    Add a get request
 
    ```bash
@@ -216,16 +222,17 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "admins": [
-        {
-            "_id": "6738648cd560d1d241cc4e6b",
-            "username": "shivam"
-        }
-    ]
+      "admins": [
+         {
+               "_id": "6738648cd560d1d241cc4e6b",
+               "username": "shivam"
+         }
+      ]
    }
    ```
 
 8. #### Get all assignments:
+
    Add a get request
 
    ```bash
@@ -238,17 +245,18 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "assignments": [
-        {
-            "userId": "shivam0510",
-            "task": "hello",
-            "admin": "shivam"
-        }
-    ]
+      "assignments": [
+         {
+               "userId": "shivam0510",
+               "task": "hello",
+               "admin": "shivam"
+         }
+      ]
    }
    ```
 
 9. #### Accepting assignment:
+
    Add a post request
 
    ```bash
@@ -259,7 +267,7 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "remarks":"Nice assignment"
+      "remarks":"Nice assignment"
    }
    ```
 
@@ -269,33 +277,34 @@ Make sure you have the following installed on your machine:
 
    ```bash
    {
-    "message": "Assignment accepted",
-    "remarks": "Nice assignment"
+      "message": "Assignment accepted",
+      "remarks": "Nice assignment"
    }
    ```
 
 10. #### Rejecting assignment:
+
     Add a post request
 
-      ```bash
-      localhost:8080/api/v1/admin/assignments/:id/reject
-      ```
+    ```bash
+    localhost:8080/api/v1/admin/assignments/:id/reject
+    ```
 
-      Select "raw" and "JSON" from the dropdown menu in the body section, then add data in the following form.
+    Select "raw" and "JSON" from the dropdown menu in the body section, then add data in the following form.
 
-      ```bash
-      {
+    ```bash
+    {
       "remarks":"Nice assignment"
-      }
-      ```
+    }
+    ```
 
-      In the headers section add new key named as authorization and add value as the token recieved while admin login starting with 'Bearer **\*\***\*\*\*\***\*\***'.
+    In the headers section add new key named as authorization and add value as the token recieved while admin login starting with 'Bearer **\*\***\*\*\*\***\*\***'.
 
-      Then click on send button to send request. You will get the response like this.
+    Then click on send button to send request. You will get the response like this.
 
-      ```bash
-      {
+    ```bash
+    {
       "message": "Assignment rejected",
       "remarks": "Wrong answers"
-      }
-      ```
+    }
+    ```
