@@ -277,25 +277,25 @@ Make sure you have the following installed on your machine:
 10. Rejecting assignment:
     Add a post request
 
-```bash
-localhost:8080/api/v1/admin/assignments/:id/reject
-```
+   ```bash
+   localhost:8080/api/v1/admin/assignments/:id/reject
+   ```
 
-Select "raw" and "JSON" from the dropdown menu in the body section, then add data in the following form.
+   Select "raw" and "JSON" from the dropdown menu in the body section, then add data in the following form.
 
-```bash
-{
- "remarks":"Wrong answers"
-}
-```
+   ```bash
+   {
+   "remarks":"Wrong answers"
+   }
+   ```
 
-In the headers section add new key named as authorization and add value as the token recieved while admin login starting with 'Bearer **\*\***\*\*\*\***\*\***'.
+   In the headers section add new key named as authorization and add value as the token recieved while admin login starting with 'Bearer **\*\***\*\*\*\***\*\***'.
 
-Then click on send button to send request. You will get the response like this.
+   Then click on send button to send request. You will get the response like this.
 
-```bash
-{
- "message": "Assignment rejected",
- "remarks": "wrong answers"
-}
-```
+   ```bash
+   {
+   "message": "Assignment rejected",
+   "remarks": "wrong answers"
+   }
+   ```
