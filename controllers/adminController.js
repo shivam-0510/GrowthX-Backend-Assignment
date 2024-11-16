@@ -135,7 +135,7 @@ class adminController {
     try {
       const { id } = req.params;
       const { remarks } = req.body;
-      const { id: adminId } = req.user; // Assuming admin ID is stored in req.user
+      const { id: adminId } = req.user; 
 
       // Find the assignment
       const findAssignment = await assignmentModel.findById(id);
@@ -172,7 +172,7 @@ class adminController {
     try {
       const { id } = req.params;
       const { remarks } = req.body;
-      const { id: adminId } = req.user; // Assuming admin ID is stored in req.user
+      const { id: adminId } = req.user; 
 
       // Find the assignment
       const findAssignment = await assignmentModel.findById(id);
