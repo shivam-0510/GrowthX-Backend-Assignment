@@ -203,8 +203,8 @@ Make sure you have the following installed on your machine:
    }
    ```
 
-   7. Get all admins:
-      Add a get request
+7. Get all admins:
+   Add a get request
 
    ```bash
    localhost:8080/api/v1/user/admins
