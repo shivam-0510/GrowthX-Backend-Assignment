@@ -121,7 +121,7 @@ class adminController {
         admin: assignment.admin ? assignment.admin.username : null,
       }));
 
-      return res.status(200).json({ response });
+      return res.status(200).json({ assignments:response });
     } catch (error) {
       console.error(error);
       return res.status(500).json({

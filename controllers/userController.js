@@ -161,7 +161,7 @@ class userController {
     try {
       //find all admins
       const allAdmins = await adminModel.find({}).select("id username");
-      return res.status(200).json(allAdmins);
+      return res.status(200).json({ admins: allAdmins });
     } catch (error) {
       console.error(error);
       return res.status(500).json({
